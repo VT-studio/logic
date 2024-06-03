@@ -2,6 +2,13 @@
 # Analyze and interpret. Provide the solution of how to get to the `x`, if feasible.
 # Aim to minimize networking operations.
 
+# So, we don't know, how many nesting we can have. 
+# But, analyzeid responses from server, we can assume, 
+# that parameter always the one latin symbol.
+# If parameter is only one symbol, we need to take latin alphabet, 
+# and to send async request. 
+# So we get all results and we check where we can find symbol "x".
+
 import httpx
 import asyncio
 
@@ -46,4 +53,3 @@ async def main() -> list:
 
 if __name__ == "__main__":
     asyncio.run(main())
-  
